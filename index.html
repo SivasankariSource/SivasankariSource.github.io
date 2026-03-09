@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Sivasankari Portfolio</title>
 
 <style>
@@ -9,70 +10,83 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial;
 }
 
 body{
-font-family: Arial, sans-serif;
-background:#f5f7fa;
+background:#f4f6f9;
 color:#333;
 }
 
-/* Navigation Bar */
-
-nav{
-background:#1f2933;
-padding:15px;
-display:flex;
-justify-content:center;
-gap:30px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#4fd1c5;
-}
-
-/* Header */
+/* HEADER */
 
 header{
+background:#0f172a;
+color:white;
 text-align:center;
 padding:60px 20px;
-background:#111827;
-color:white;
 }
 
 header h1{
-font-size:40px;
+font-size:38px;
 margin-bottom:10px;
 }
 
 header p{
-font-size:18px;
-color:#d1d5db;
+color:#cbd5e1;
 }
 
-/* Sections */
+/* NAVIGATION */
 
-section{
+nav{
+display:flex;
+justify-content:center;
+gap:30px;
+background:#1e293b;
+padding:15px;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+nav button:hover{
+color:#38bdf8;
+}
+
+/* TAB CONTENT */
+
+.tab{
+display:none;
+padding:40px;
 max-width:900px;
 margin:auto;
-padding:40px 20px;
 }
 
-/* Section titles */
+/* ABOUT */
 
-h2{
-margin-bottom:20px;
-border-left:5px solid #4fd1c5;
-padding-left:10px;
+.about-box{
+display:flex;
+gap:30px;
+align-items:center;
 }
 
-/* Project cards */
+.profile{
+width:120px;
+height:120px;
+border-radius:50%;
+background:#cbd5e1;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+}
+
+/* PROJECTS */
 
 .projects{
 display:grid;
@@ -84,43 +98,45 @@ gap:20px;
 background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
-transition:transform 0.2s;
+box-shadow:0 5px 10px rgba(0,0,0,0.08);
+transition:0.2s;
 }
 
 .project:hover{
 transform:translateY(-5px);
 }
 
-/* Skills */
-
-.skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
+/* SKILLS */
 
 .skill{
-background:#4fd1c5;
-color:white;
-padding:8px 14px;
-border-radius:20px;
-font-size:14px;
+margin-bottom:15px;
 }
 
-/* Contact */
+.bar{
+height:8px;
+background:#e5e7eb;
+border-radius:10px;
+}
+
+.fill{
+height:8px;
+background:#38bdf8;
+border-radius:10px;
+}
+
+/* CONTACT */
 
 .contact{
 background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
+box-shadow:0 5px 10px rgba(0,0,0,0.08);
 }
 
 footer{
 text-align:center;
-padding:20px;
 margin-top:40px;
+padding:20px;
 color:#777;
 }
 
@@ -130,38 +146,47 @@ color:#777;
 
 <body>
 
-<!-- Navigation -->
-
-<nav>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<!-- Header -->
-
 <header>
+
 <h1>Sivasankari Balasubramaniam</h1>
-<p><b>Computer Science Student</b> | Software Development | Problem Solving</p>
+<p>Computer Science Student | Software Development</p>
+
 </header>
 
-<!-- About -->
+<nav>
 
-<section id="about">
+<button onclick="openTab('about')">About</button>
+<button onclick="openTab('projects')">Projects</button>
+<button onclick="openTab('skills')">Skills</button>
+<button onclick="openTab('contact')">Contact</button>
+
+</nav>
+
+<!-- ABOUT -->
+
+<div id="about" class="tab">
 
 <h2>About Me</h2>
 
+<div class="about-box">
+
+<div class="profile">
+👩‍💻
+</div>
+
 <p>
-I am a <b>Computer Science student</b> passionate about building software solutions and exploring new technologies. 
-I enjoy working on <b>web applications, data systems, and problem-solving projects</b> that create real-world impact.
+I am a Computer Science student passionate about building software systems
+and solving real-world problems. I enjoy working with programming languages,
+data systems, and modern technologies to create impactful solutions.
 </p>
 
-</section>
+</div>
 
-<!-- Projects -->
+</div>
 
-<section id="projects">
+<!-- PROJECTS -->
+
+<div id="projects" class="tab">
 
 <h2>Projects</h2>
 
@@ -169,61 +194,107 @@ I enjoy working on <b>web applications, data systems, and problem-solving projec
 
 <div class="project">
 <h3>MindCare Web App</h3>
-<p>Mental health support web application designed to provide resources and assistance to users.</p>
+<p>Mental health support system providing resources and assistance.</p>
 </div>
 
 <div class="project">
 <h3>Job Matching System</h3>
-<p>A system that matches job seekers with relevant job opportunities using structured filtering.</p>
+<p>Platform that matches job seekers with opportunities.</p>
 </div>
 
 <div class="project">
 <h3>Water Quality Detection</h3>
-<p>Machine learning based system that detects water contamination and alerts users.</p>
+<p>Machine learning model detecting water contamination.</p>
 </div>
 
 </div>
 
-</section>
+</div>
 
-<!-- Skills -->
+<!-- SKILLS -->
 
-<section id="skills">
+<div id="skills" class="tab">
 
 <h2>Skills</h2>
 
-<div class="skills">
+<div class="skill">
+Python
+<div class="bar">
+<div class="fill" style="width:80%"></div>
+</div>
+</div>
 
-<div class="skill">Python</div>
-<div class="skill">Java</div>
-<div class="skill">SQL</div>
-<div class="skill">Power BI</div>
-<div class="skill">HTML</div>
-<div class="skill">Git</div>
+<div class="skill">
+Java
+<div class="bar">
+<div class="fill" style="width:70%"></div>
+</div>
+</div>
+
+<div class="skill">
+SQL
+<div class="bar">
+<div class="fill" style="width:75%"></div>
+</div>
+</div>
+
+<div class="skill">
+Power BI
+<div class="bar">
+<div class="fill" style="width:65%"></div>
+</div>
+</div>
+
+<div class="skill">
+HTML
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+</div>
 
 </div>
 
-</section>
+<!-- CONTACT -->
 
-<!-- Contact -->
-
-<section id="contact">
+<div id="contact" class="tab">
 
 <h2>Contact</h2>
 
 <div class="contact">
 
 <p><b>Email:</b> balasubramaniamsivasankari@gmail.com</p>
-<p><b>LinkedIn:</b> http://www.linkedin.com/in/sivasankari-balasubramaniam-a4009227b</p>
-<p><b>GitHub:</b>https://github.com/SivasankariSource/SivasankariSource</p>
+
+<p><b>LinkedIn:</b><br>
+linkedin.com/in/sivasankari-balasubramaniam-a4009227b</p>
+
+<p><b>GitHub:</b><br>
+github.com/SivasankariSource</p>
 
 </div>
 
-</section>
+</div>
 
 <footer>
 © 2026 Sivasankari Balasubramaniam
 </footer>
+
+<script>
+
+function openTab(tabName){
+
+var tabs=document.querySelectorAll(".tab");
+
+tabs.forEach(tab=>{
+tab.style.display="none";
+});
+
+document.getElementById(tabName).style.display="block";
+
+}
+
+openTab("about");
+
+</script>
 
 </body>
 </html>
