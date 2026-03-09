@@ -4,74 +4,226 @@
 <title>Sivasankari Portfolio</title>
 
 <style>
-body{
-font-family: Arial;
+
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
 }
+
+body{
+font-family: Arial, sans-serif;
+background:#f5f7fa;
+color:#333;
+}
+
+/* Navigation Bar */
+
+nav{
+background:#1f2933;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#4fd1c5;
+}
+
+/* Header */
 
 header{
-background:#222;
-color:white;
-padding:40px;
 text-align:center;
+padding:60px 20px;
+background:#111827;
+color:white;
 }
 
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+color:#d1d5db;
+}
+
+/* Sections */
+
 section{
-padding:40px;
-max-width:800px;
+max-width:900px;
 margin:auto;
+padding:40px 20px;
+}
+
+/* Section titles */
+
+h2{
+margin-bottom:20px;
+border-left:5px solid #4fd1c5;
+padding-left:10px;
+}
+
+/* Project cards */
+
+.projects{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
 }
 
 .project{
 background:white;
 padding:20px;
-margin:15px 0;
 border-radius:10px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+transition:transform 0.2s;
 }
+
+.project:hover{
+transform:translateY(-5px);
+}
+
+/* Skills */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skill{
+background:#4fd1c5;
+color:white;
+padding:8px 14px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* Contact */
+
+.contact{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+color:#777;
+}
+
 </style>
 
 </head>
 
 <body>
 
+<!-- Navigation -->
+
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Header -->
+
 <header>
 <h1>Sivasankari Balasubramaniam</h1>
-<p>Computer Science Student</p>
+<p><b>Computer Science Student</b> | Software Development | Problem Solving</p>
 </header>
 
-<section>
+<!-- About -->
+
+<section id="about">
+
 <h2>About Me</h2>
+
 <p>
-Computer Science student interested in software development,
-data systems, and building real-world solutions.
+I am a <b>Computer Science student</b> passionate about building software solutions and exploring new technologies. 
+I enjoy working on <b>web applications, data systems, and problem-solving projects</b> that create real-world impact.
 </p>
+
+</section>
+
+<!-- Projects -->
+
+<section id="projects">
 
 <h2>Projects</h2>
 
+<div class="projects">
+
 <div class="project">
 <h3>MindCare Web App</h3>
-<p>A mental health support web application.</p>
+<p>Mental health support web application designed to provide resources and assistance to users.</p>
 </div>
 
 <div class="project">
 <h3>Job Matching System</h3>
-<p>A system that connects candidates with suitable jobs.</p>
+<p>A system that matches job seekers with relevant job opportunities using structured filtering.</p>
 </div>
 
 <div class="project">
 <h3>Water Quality Detection</h3>
-<p>Machine learning system to detect water contamination.</p>
+<p>Machine learning based system that detects water contamination and alerts users.</p>
 </div>
 
-<h2>Skills</h2>
-<p>Python | Java | SQL | Power BI</p>
-
-<h2>Contact</h2>
-<p>Email: your@email.com</p>
+</div>
 
 </section>
+
+<!-- Skills -->
+
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">SQL</div>
+<div class="skill">Power BI</div>
+<div class="skill">HTML</div>
+<div class="skill">Git</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="contact">
+
+<p><b>Email:</b> balasubramaniamsivasankari@gmail.com</p>
+<p><b>LinkedIn:</b> http://www.linkedin.com/in/sivasankari-balasubramaniam-a4009227b</p>
+<p><b>GitHub:</b>https://github.com/SivasankariSource/SivasankariSource</p>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Sivasankari Balasubramaniam
+</footer>
 
 </body>
 </html>
